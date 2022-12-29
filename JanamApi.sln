@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JanamApi", "JanamApi.csproj", "{7DDB1521-F613-40C8-B0E9-106194A2648E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7DDB1521-F613-40C8-B0E9-106194A2648E}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{7DDB1521-F613-40C8-B0E9-106194A2648E}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{7DDB1521-F613-40C8-B0E9-106194A2648E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DDB1521-F613-40C8-B0E9-106194A2648E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4C320AC1-16ED-4D02-A843-F67CB5EA811A}
+	EndGlobalSection
+EndGlobal

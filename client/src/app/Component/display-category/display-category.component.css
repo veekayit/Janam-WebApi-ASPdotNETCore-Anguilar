@@ -1,0 +1,97 @@
+table, th { border: 2px solid black; }
+td { 
+    border: thin solid black; 
+    color: black;
+    /* float:left; */
+}
+th{
+    color: bisque;
+    background-color: rgb(15, 86, 110);
+}
+tr:nth-child(even){
+    background-color: rgb(188, 226, 239);
+    color: bisque;
+}
+        
+tr:nth-child(odd){
+   
+    background-color: white;
+    color: black;
+}
+.table-responsive{
+    position: absolute;
+    width: 95%;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+table{
+    text-align: center;
+}
+    
+    /* thead.tr.th { */
+     
+          /* float:left;
+         background-color: #f39c12;
+         border-color:#e67e22; */
+         /* overflow-x:auto; */
+         /* } */
+  
+  
+
+mat-progress-spinner{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    
+    }
+
+.right-inner-addon {
+    position: relative;
+}
+
+.right-inner-addon input{
+    padding-right: 30px;
+}
+
+.right-inner-addon i{
+	
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    }
+	/* text-indent: -15px;
+	bottom: -8px;
+	font-size: 1.3em;*/
+   /* right: 0px;
+    padding: 10px 12px;
+} */
+/* #transparentScrollbarDiv::-webkit-scrollbar {
+    width: inherit;
+} */
+
+/* this targets the default scrollbar (compulsory) */
+
+#transparentScrollbarDiv::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* the new scrollbar will have a flat appearance with the set background color */
+
+#transparentScrollbarDiv::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+/* this will style the thumb, ignoring the track */
+
+#transparentScrollbarDiv::-webkit-scrollbar-button {
+    background-color: transparent;
+}
+
+/* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+
+#transparentScrollbarDiv::-webkit-scrollbar-corner {
+    background-color: transparent;
+}

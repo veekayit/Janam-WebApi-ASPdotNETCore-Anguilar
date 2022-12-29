@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>F:\PROJECTS\ASP.NET\veekay\publish janamapi</_PublishTargetUrl>
+    <History>True|2022-12-10T04:51:40.5013255Z;True|2022-12-09T22:29:16.9766583+05:30;True|2022-12-09T22:04:02.3776276+05:30;True|2022-12-07T01:04:22.0650589+05:30;True|2022-12-07T00:48:55.1222634+05:30;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DevConnection">
+      <Value>Data Source=%28localdb%29\MSSQLLocalDB%3bInitial Catalog=JANAMMIS%3buser id = sa%3bpassword = sql123%3bConnect Timeout=30%3bEncrypt=False%3bTrustServerCertificate=False%3bApplicationIntent=ReadWrite%3bMultiSubnetFailover=False</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

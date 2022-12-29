@@ -1,0 +1,106 @@
+<h1 class="container mx-1" style="text-decoration: underline;
+    font: revert;
+    margin-top: 15px;">
+     Financial Report
+</h1>
+
+<div class="container mx-0">
+    <form class="form-inline">
+        Select Calender: 
+        
+         <!-- <div class="col-md-12"> -->
+            <div class='right-inner-addon date datepicker' data-date-format="yyyy-mm-dd">
+                <i class="fa-regular fa-calendar-check form-control-feedback" 
+                style="font-size:x-large">
+            </i>
+                <input class="btn btn-outline-secondary calendar" style="color:
+                    black;width: 150px;" placeholder="yyyy-mm-dd"
+                    name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" 
+                    (ngModelChange)="inputDatefrom($event)" (click)="d.toggle()"
+                >
+             
+               
+                <div style="    display: -webkit-inline-box;">
+                    <h6 style="color:black ; padding-left: 10px;display: flex;
+                                align-items: flex-start;visibility: hidden;" id="year">
+                                    Financial Year :
+                                    <p style="font-weight: bold;color: blue;display: inline-block;">
+                                    {{inputProcedure.FinYear +" - "+ inputProcedure.finyear}}</p>
+                    </h6>
+                </div>
+            </div>
+            <div id="date" style="visibility: hidden;">
+            From: 
+        <p style="font-weight: bold;color: blue;padding-right: 10px;display: inline-block;">
+            {{inputProcedure?.FromDate}}</p>
+        To: 
+        <p style="font-weight: bold;color: blue;padding-right: 10px;display: inline-block;">
+            {{inputProcedure?.ToDate}}</p>
+        </div>
+    </form>
+    
+</div>
+
+        <!-- </div> -->
+    <!-- </form>
+    <form class="form-inline" style="padding-left: 50px;">
+        TO DATE:  
+        <div class="col-md-12" id="todateinput" style="visibility:hidden ;">
+           <div class='right-inner-addon date datepicker' data-date-format="yyyy-mm-dd">
+               
+               <input class="btn btn-outline-secondary calendar" style="color: black;width: 150px;" placeholder="yyyy-mm-dd"
+                   name="dp2" [(ngModel)]="model2" ngbDatepicker #d2="ngbDatepicker" 
+                   (ngModelChange)="inputDateto($event)" (click)="d2.toggle()">
+               <i class="fa-regular fa-calendar-check form-control-feedback" style="font-size:x-large"></i>
+           </div>
+       </div>
+   </form> -->
+    <!-- <h4 style="color:black ; padding-left: 10px; display: inline-table;display: flex;">
+        From Date: 
+        <p style="font-weight: bold;color: blue;padding-right: 10px;">
+            {{inputProcedure?.FromDate}}</p>
+        To Date: 
+        <p style="font-weight: bold;color: blue;padding-right: 10px;">
+            {{inputProcedure?.ToDate}}</p>
+        Financial Year :
+        <p style="font-weight: bold;color: blue;">
+        {{inputProcedure.FinYear +" - "+ inputProcedure.finyear}}</p>
+    </h4> -->
+
+    <mat-progress-spinner [mode]="'indeterminate'" *ngIf="loading$ | async"></mat-progress-spinner>
+<div class="table-responsive mx-1" id="myTable-2" style="visibility: hidden;">
+    
+    
+    <br/>
+    <table class="table table-fixed table-hover" *ngIf="displayCategory && displayCategory.length > 0">
+        <thead class="table-dark">
+            <tr>    
+                <th class="col-xs-1">Category</th>
+                <th class="col-xs-1">Currency</th>
+                <th class="col-xs-1">Amt Dr</th>
+                <th class="col-xs-1">YTD Amt</th>
+                <th class="col-xs-1">Bill Amt</th>
+                <th class="col-xs-1">YTD Bill Amt</th>
+                <th class="col-xs-1">Unbilled Amt</th>
+                <th class="col-xs-1">YTD Unbilled Amt</th>
+                <th class="col-xs-1">Ex. Rate</th>
+            </tr>
+            </thead>
+            
+            <tbody>
+                <tr *ngFor="let out of displayCategory">
+                    <td class="col-xs-1">{{ out.client_Category_Name }}</td>
+                    <td class="col-xs-1">{{ out.currencyName }}</td>
+                    <td class="col-xs-1" style="text-align:right ;">{{ out.amount_dr | currency:"":""}}</td>
+                    <td class="col-xs-1" style="text-align:right ;">{{ out.ytD_Amount_dr | currency:"":""}}</td>
+                    <td class="col-xs-1" style="text-align:right ;">{{ out.bill_Amount | currency:"":""}}</td>
+                    <td class="col-xs-1" style="text-align:right ;">{{ out.ytD_Bill_amount | currency:"":""}}</td>
+                    <td class="col-xs-1" style="text-align:right ;">{{ out.unbilled_Amount | currency:"":""}}</td>
+                    <td class="col-xs-1" style="text-align:right ;">{{ out.ytD_Unbilled_Amount | currency:"":""}}</td>
+                    <td class="col-xs-1" style="text-align:right ;">{{ out.exchange_Rate }}</td>
+                    
+                </tr>
+            </tbody>
+        </table>
+        
+</div>
